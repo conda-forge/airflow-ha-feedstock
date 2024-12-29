@@ -6,27 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/airflow-ha/airflow_ha-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-{{ version }}.tar.gz
   sha256: 779b5832cb4ab3c389aee1b453a115b1f595dcbd14fe18ce9f6b6ee717410cfa
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - apache-airflow >=2,<3
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
