@@ -22,7 +22,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2,<3
+  run_constrained:
+    - apache-airflow >=2.8,<3
 
 test:
   requires:
