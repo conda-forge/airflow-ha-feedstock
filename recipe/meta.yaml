@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.8,<3
-    - airflow-common-operators >=0.2.0,<0.5
+    - airflow-common-operators >=0.5,<0.6
 
 test:
   requires:
