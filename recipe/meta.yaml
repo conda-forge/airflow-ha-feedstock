@@ -1,5 +1,5 @@
 {% set name = "airflow-ha" %}
-{% set version = "1.4.0" %}
+{% set version = "1.4.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-{{ version }}.tar.gz
-  sha256: 6bd16d77a5aca6ec0b6f9dfff6c1e3f6e045a88cc55f038d540c3a9fc23bc79a
+  sha256: 8e5c2f365b72379df4a8c6ba8c30f705952160932a7970c7de49b2bd9b75d61e
 
 build:
   number: 0
