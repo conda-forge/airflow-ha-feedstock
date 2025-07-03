@@ -1,5 +1,5 @@
 {% set name = "airflow-ha" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-{{ version }}.tar.gz
-  sha256: 72de56aee3d6e8b971e29042760555744f45b88a553734b4398d856c1d9ede4b
+  sha256: aec5ac088f8a548926f30c1ce703ef77caff866bc29772ff129cff0bcbb97b6e
 
 build:
   number: 0
@@ -23,9 +23,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.8,<3
-    - airflow-common-operators >=0.5,<0.7
-    - airflow-pydantic >=1.3,<1.4
+    - apache-airflow >=2.8,<3.1
+    - airflow-pydantic >=1.4,<1.5
 
 test:
   requires:
