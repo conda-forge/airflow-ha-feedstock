@@ -23,7 +23,6 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.8,<3.1
     - airflow-pydantic >=1.4,<1.6
 
 test:
