@@ -23,7 +23,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - airflow-pydantic >=1.4,<1.6
+    - airflow-pydantic >=1.6,<1.7
 
 test:
   requires:
