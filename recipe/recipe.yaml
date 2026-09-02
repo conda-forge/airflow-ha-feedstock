@@ -1,0 +1,50 @@
+schema_version: 1
+
+context:
+  name: airflow-ha
+  version: "1.6.3"
+  python_min: "3.11"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-${{ version }}.tar.gz
+  sha256: ae1c129e2322035219d17aeea3c2c20aa0917cd62bd1d192c0c1dcb93a1db1f8
+
+build:
+  number: 1
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - hatchling
+  run:
+    - python >=${{ python_min }}
+    - airflow-pydantic >=1.6,<1.7
+
+tests:
+  - python:
+      imports:
+        - airflow_ha
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: High Availability (HA) DAG Utility
+  description: High Availability (HA) DAG Utility
+  homepage: https://github.com/airflow-laminar/airflow-ha
+  repository: https://github.com/airflow-laminar/airflow-ha
+
+extra:
+  recipe-maintainers:
+    - timkpaine
