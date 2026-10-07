@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: airflow-ha
-  version: "1.6.5"
+  version: "1.6.6"
   python_min: "3.11"
 
 package:
@@ -10,8 +10,8 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-${{ version }}.tar.gz
-  sha256: 16f8a8977aa35f9f2f034a84072965e2c2265a8fa5d403747fa556404310594c
+  url: https://files.pythonhosted.org/packages/5a/1e/a696a6fd30337de25ea66c1324a76c576dea2da515596fd67c153e23a477/airflow_ha-1.6.6.tar.gz
+  sha256: d57d7bf7f9ac8c29a0839e376ba9c03a2b81e02e811154bd0170a19842ad86ea
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - airflow-pydantic >=1.6,<1.7
+    - airflow-pydantic >=1.6,<1.8
 
 tests:
   - python:
