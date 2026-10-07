@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: airflow-ha
-  version: "1.6.4"
+  version: "1.6.5"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-ha/airflow_ha-${{ version }}.tar.gz
-  sha256: 031c7330be1289001dfe3067c990f47999cf3e49c809ef1f32350ac86079ad6c
+  sha256: 16f8a8977aa35f9f2f034a84072965e2c2265a8fa5d403747fa556404310594c
 
 build:
   number: 0
