@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: airflow-ha
   version: "1.6.6"
-  python_min: "3.11"
 
 package:
   name: ${{ name|lower }}
